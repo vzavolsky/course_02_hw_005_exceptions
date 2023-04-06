@@ -8,7 +8,7 @@ public class AppServiceImpl implements AppService {
         if (!login.matches("[a-zA-Z0-9_]{1,20}")) {
             throw new WrongLoginException();
         }
-        if (!password.equals(confirmPassword) && password.matches("[a-zA-Z0-9_]{1,20}")) {
+        if (!password.equals(confirmPassword) || !password.matches("[a-zA-Z0-9_]{1,20}")) {
             throw new WrongPasswordException();
         }
         return true;

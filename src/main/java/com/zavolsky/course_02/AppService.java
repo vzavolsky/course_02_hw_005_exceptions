@@ -1,4 +1,5 @@
 package com.zavolsky.course_02;
 
-public class AppService {
+public interface AppService {
+    boolean checkUserData(String login, String password, String confirmPassword);
 }
